@@ -2,17 +2,24 @@
 <body>
   <H1>Hello</H1>
 
-    <script>
+  <script>
     window.intercomSettings = {
-      api_base: "https://api-iam.intercom.io",
-      app_id: "q2tm2hkh",
+      api_base: "https://johnny-t40msmdqgby9jhw6.ngrok.pizza",
+      app_id: "euvgl754",
+      user_id: user.id, // IMPORTANT: 
+      // In Zendesk, ensure that each user has a unique external_id, typically their user_id or email.
+      // In Intercom, when installing Messenger, pass a user_id that matches the external_id used for that user in Zendesk.
+      // If no user_id exists, the user's email is used instead to match the external_id in Zendesk.
+      name: user.name, // IMPORTANT: Replace "user.name" with the variable you use to capture the user's name
+      email: user.email, // IMPORTANT: Replace "user.email" with the variable you use to capture the user's email address
+      created_at: user.createdAt, // IMPORTANT: Replace "user.createdAt" with the variable you use to capture the user's sign-up date
     };
   </script>
   
   
   <script>
-    // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/q2tm2hkh'
-    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/q2tm2hkh';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/euvgl754'
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/euvgl754';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
   </script>
 </body>
 </html>
